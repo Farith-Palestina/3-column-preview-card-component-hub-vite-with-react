@@ -1,0 +1,157 @@
+:root {
+    background-color: hsl(0, 0%, 95%);
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5rem 7rem 0 7rem;
+}
+
+@font-face {
+    font-family: 'BigShouldersDisplay';
+    src: url('/src/assets/fonts/BigShouldersDisplay.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca.ttf');
+    font-weight: 400;
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'BigShouldersDisplay';
+}
+
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'LexendDeca';
+    font-size: 15px;
+    padding-bottom: 75px;
+}
+
+button{
+    background-color: hsl(0, 0%, 95%);
+    font-family: 'LexendDeca';
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+button:hover{
+    border: 2px solid;
+    border-color: hsl(0, 0%, 95%);
+}
+
+.columns-container{
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+}
+
+.first-column{
+    background-color: hsl(31, 77%, 52%);
+    padding: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.second-column{
+    background-color: hsl(184, 100%, 22%);
+    padding: 50px;
+}
+
+.third-column{
+    background-color: hsl(179, 100%, 13%);
+    padding: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.first-column button{
+    color: hsl(31, 77%, 52%);
+}
+
+.second-column button{
+    color: hsl(184, 100%, 22%);
+}
+
+.third-column button{
+    color: hsl(179, 100%, 13%);
+}
+
+.first-column button:hover{
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+}
+
+.second-column button:hover{
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+}
+
+.third-column button:hover{
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+}
+
+.footer-page{
+    padding: 1rem 0 0 0;
+}
+
+.footer-page p{
+    font-family: 'LexendDeca';
+    text-align: center;
+    color: black;
+}
+
+.footer-page p a{
+    text-decoration: none;
+    color: hsl(179, 100%, 13%);
+    transition: all 500ms ease;
+}
+
+.footer-page p a:hover{
+    color: hsl(31, 77%, 52%);
+}
+
+@media screen and (max-width: 768px) {
+    #root {
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 2rem 0 0 0;
+    }
+
+    p{
+        padding-bottom: 25px;
+    }
+
+    .columns-container{
+        display: grid;
+        grid-template-columns: repeat(1, 330px);
+    }
+
+    .first-column{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .third-column{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
